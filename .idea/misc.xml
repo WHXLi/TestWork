@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/menss/Android_Develop/4. ANDROID/TestWork/app/src/main/res/drawable/splash_screen.xml" value="0.10462962962962963" />
         <entry key="..\:/Users/menss/Android_Develop/4. ANDROID/TestWork/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/menss/Android_Develop/4. ANDROID/TestWork/app/src/main/res/layout/fragment_films.xml" value="0.1" />
+        <entry key="..\:/Users/menss/Android_Develop/4. ANDROID/TestWork/app/src/main/res/layout/item_film.xml" value="0.11458333333333333" />
       </map>
     </option>
   </component>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Licenses -->
+    <string name="licenses">Icons made by www.flaticon.com</string>
+
+    <!-- App strings -->
+    <string name="app_name">TestWork</string>
+
+    <!-- BottomAppBar strings -->
+    <string name="fab_description">FAB Icon</string>
+
+
+</resources>
