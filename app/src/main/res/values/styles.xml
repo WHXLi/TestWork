@@ -18,4 +18,48 @@
         <item name="srcCompat">@drawable/ic_baseline_search_24</item>
         <item name="tint">@color/bottom_app_bar_fab_icon</item>
     </style>
+
+    <!-- item_film styles-->
+    <style name="item_film_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_film_layout_height</item>
+    </style>
+
+    <style name="item_film_image">
+        <item name="android:layout_width">@dimen/constraint_match</item>
+        <item name="android:layout_height">@dimen/constraint_match</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    <style name="item_film_title">
+        <item name="android:layout_width">@dimen/constraint_match</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingStart">@dimen/item_film_text_padding</item>
+        <item name="android:paddingEnd">@dimen/item_film_text_padding</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/item_film_title_text_size</item>
+    </style>
+
+    <style name="item_film_info">
+        <item name="android:layout_width">@dimen/constraint_match</item>
+        <item name="android:layout_height">@dimen/constraint_match</item>
+        <item name="android:paddingStart">@dimen/item_film_text_padding</item>
+        <item name="android:paddingEnd">@dimen/item_film_text_padding</item>
+        <item name="android:textSize">@dimen/item_film_info_text_size</item>
+    </style>
+
+    <style name="item_film_pagination">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">@dimen/constraint_match</item>
+        <item name="android:padding">@dimen/item_film_pagination_padding</item>
+        <item name="android:textSize">@dimen/item_film_pagination_text_size</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="item_film_divider">
+        <item name="android:layout_width">@dimen/constraint_match</item>
+        <item name="android:layout_height">@dimen/item_film_divider</item>
+        <item name="android:background">@color/black</item>
+    </style>
 </resources>

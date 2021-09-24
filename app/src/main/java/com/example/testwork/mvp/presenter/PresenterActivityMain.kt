@@ -1,12 +1,12 @@
 package com.example.testwork.mvp.presenter
 
 import com.example.testwork.mvp.navigation.IScreens
-import com.example.testwork.mvp.view.ActivityMainView
+import com.example.testwork.mvp.view.ViewActivityMain
 import com.github.terrakok.cicerone.Router
 import moxy.MvpPresenter
 import javax.inject.Inject
 
-class ActivityMainPresenter : MvpPresenter<ActivityMainView>() {
+class PresenterActivityMain : MvpPresenter<ViewActivityMain>() {
     @Inject
     lateinit var router: Router
     @Inject
@@ -19,5 +19,9 @@ class ActivityMainPresenter : MvpPresenter<ActivityMainView>() {
 
     fun displayFilmsFragment(){
         router.replaceScreen(screens.filmsScreen())
+    }
+
+    fun backClick(){
+        router.exit()
     }
 }

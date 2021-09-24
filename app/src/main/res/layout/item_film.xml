@@ -1,7 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_film_layout"
+    style="@style/item_film_layout">
 
+    <TextView
+        android:id="@+id/item_film_pagination"
+        style="@style/item_film_pagination"
+        app:layout_constraintBottom_toBottomOf="@+id/item_film_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_film_image"
+        style="@style/item_film_image"
+        android:contentDescription="@string/item_film_image_description"
+        app:layout_constraintBottom_toTopOf="@+id/item_film_divider"
+        app:layout_constraintEnd_toStartOf="@+id/item_film_line"
+        app:layout_constraintStart_toEndOf="@+id/item_film_pagination"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/item_film_line"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.55" />
+
+    <TextView
+        android:id="@+id/item_film_title"
+        style="@style/item_film_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_film_line"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/item_film_info"
+        style="@style/item_film_info"
+        app:layout_constraintBottom_toTopOf="@+id/item_film_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/item_film_line"
+        app:layout_constraintTop_toBottomOf="@+id/item_film_title" />
+
+    <View
+        android:id="@+id/item_film_divider"
+        style="@style/item_film_divider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

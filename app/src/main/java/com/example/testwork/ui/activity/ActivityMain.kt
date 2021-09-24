@@ -3,17 +3,18 @@ package com.example.testwork.ui.activity
 import android.os.Bundle
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.example.testwork.App
+import com.example.testwork.BackBtnListener
 import com.example.testwork.R
 import com.example.testwork.databinding.ActivityMainBinding
-import com.example.testwork.mvp.presenter.ActivityMainPresenter
-import com.example.testwork.mvp.view.ActivityMainView
+import com.example.testwork.mvp.presenter.PresenterActivityMain
+import com.example.testwork.mvp.view.ViewActivityMain
 import com.github.terrakok.cicerone.NavigatorHolder
 import com.github.terrakok.cicerone.androidx.AppNavigator
 import moxy.MvpAppCompatActivity
 import moxy.ktx.moxyPresenter
 import javax.inject.Inject
 
-class ActivityMain : MvpAppCompatActivity(R.layout.activity_main), ActivityMainView {
+class ActivityMain : MvpAppCompatActivity(R.layout.activity_main), ViewActivityMain {
 
     @Inject
     lateinit var navigatorHolder: NavigatorHolder
@@ -21,7 +22,7 @@ class ActivityMain : MvpAppCompatActivity(R.layout.activity_main), ActivityMainV
     private val binding: ActivityMainBinding by viewBinding()
     private val navigator = AppNavigator(this, R.id.container_fragment)
     private val presenter by moxyPresenter {
-        ActivityMainPresenter().apply {
+        PresenterActivityMain().apply {
             App.instance.appComponent.inject(this)
         }
     }
@@ -39,6 +40,13 @@ class ActivityMain : MvpAppCompatActivity(R.layout.activity_main), ActivityMainV
     override fun onPause() {
         super.onPause()
         navigatorHolder.removeNavigator()
+    }
+
+    override fun onBackPressed() {
+        supportFragmentManager.fragments.forEach {
+            if (it is BackBtnListener && it.backPressed()) return
+        }
+        presenter.backClick()
     }
 
     override fun showFragmentFilms() {
